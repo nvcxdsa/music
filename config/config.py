@@ -180,68 +180,68 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/start_img_2.png",
+    "https://files.catbox.moe/alygfw.jpg",
     # This is the file id of the photo you can also put the url of photo
 )
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/ping_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
     "PLAYLIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/playlist_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 GLOBAL_IMG_URL = getenv(
     "GLOBAL_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/global_stats_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 STATS_IMG_URL = getenv(
     "STATS_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/stats_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 TELEGRAM_AUDIO_URL = getenv(
     "TELEGRAM_AUDIO_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/telegram_audio_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 TELEGRAM_VIDEO_URL = getenv(
     "TELEGRAM_VIDEO_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/telegram_video_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 STREAM_IMG_URL = getenv(
     "STREAM_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/stream_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 SOUNCLOUD_IMG_URL = getenv(
     "SOUNCLOUD_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/soundcloud_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 YOUTUBE_IMG_URL = getenv(
     "YOUTUBE_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/youtube_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 SPOTIFY_ARTIST_IMG_URL = getenv(
     "SPOTIFY_ARTIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/spotify_artist_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 SPOTIFY_ALBUM_IMG_URL = getenv(
     "SPOTIFY_ALBUM_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/spotify_album_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 SPOTIFY_PLAYLIST_IMG_URL = getenv(
     "SPOTIFY_PLAYLIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/spotify_playlist_img.png",
+    "https://files.catbox.moe/alygfw.jpg",
 )
 
 
@@ -290,7 +290,7 @@ if GITHUB_REPO:
 if PING_IMG_URL:
     if (
         PING_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/ping_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
@@ -301,7 +301,7 @@ if PING_IMG_URL:
 if PLAYLIST_IMG_URL:
     if (
         PLAYLIST_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/playlist_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", PLAYLIST_IMG_URL):
             print(
@@ -312,7 +312,7 @@ if PLAYLIST_IMG_URL:
 if GLOBAL_IMG_URL:
     if (
         GLOBAL_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/global_stats_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", GLOBAL_IMG_URL):
             print(
@@ -323,7 +323,7 @@ if GLOBAL_IMG_URL:
 if STATS_IMG_URL:
     if (
         STATS_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/stats_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", STATS_IMG_URL):
             print(
@@ -334,7 +334,7 @@ if STATS_IMG_URL:
 if TELEGRAM_AUDIO_URL:
     if (
         TELEGRAM_AUDIO_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/telegram_audio_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", TELEGRAM_AUDIO_URL):
             print(
@@ -345,7 +345,7 @@ if TELEGRAM_AUDIO_URL:
 if STREAM_IMG_URL:
     if (
         STREAM_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/stream_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", STREAM_IMG_URL):
             print(
@@ -356,7 +356,7 @@ if STREAM_IMG_URL:
 if SOUNCLOUD_IMG_URL:
     if (
         SOUNCLOUD_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/soundcloud_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", SOUNCLOUD_IMG_URL):
             print(
@@ -367,7 +367,7 @@ if SOUNCLOUD_IMG_URL:
 if YOUTUBE_IMG_URL:
     if (
         YOUTUBE_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/youtube_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
@@ -378,7 +378,7 @@ if YOUTUBE_IMG_URL:
 if TELEGRAM_VIDEO_URL:
     if (
         TELEGRAM_VIDEO_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/flora-music-bot/refs/heads/main/assets/telegram_video_img.png"
+        != "https://files.catbox.moe/alygfw.jpg"
     ):
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
