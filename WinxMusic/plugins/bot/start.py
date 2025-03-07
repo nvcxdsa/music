@@ -71,7 +71,7 @@ async def start_comm(client: Client, message: Message, _):
                 disable_web_page_preview=True,
             )
         if name[0:3] == "sta":
-            m = await message.reply_text("🔎 Buscando suas estatísticas pessoais!")
+            m = await message.reply_text("🔎 Mencari statistik pribadi Anda!")
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
             if not stats:
@@ -106,9 +106,9 @@ async def start_comm(client: Client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[Arquivos e áudios do Telegram]({config.SUPPORT_GROUP}) ** tocados {count} vezes**\n\n"
+                        msg += f"🔗[File dan audio dari Telegram]({config.SUPPORT_GROUP}) ** diputar {count} kali**\n\n"
                     else:
-                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** tocados {count} vezes**\n\n"
+                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** diputar {count} kali**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
                 return videoid, msg
 
@@ -130,7 +130,7 @@ async def start_comm(client: Client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"👤 {message.from_user.mention} acabou de iniciar o bot para verificar a <code>lista de Sudo</code>\n\n🆔 **ID do usuário:** {sender_id}\n📛 **Nome do usuário:** {sender_name}",
+                    f"💌 ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ\n> 👤 {message.from_user.mention} baru saja memulai bot untuk memeriksa <code>daftar Sudo</code>\n> 🆔 **ID Pengguna:** {sender_id}\n> 📛 **Nama Pengguna:** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -160,24 +160,23 @@ async def start_comm(client: Client, message: Message, _):
                 channel = result["channel"]["name"]
                 link = result["link"]
                 published = result["publishedTime"]
-                searched_text = f"""
-🔍__**Informações da Faixa de Vídeo**__
-
-❇️**Título:** {title}
-
-⏳**Duração:** {duration} Minutos
-👀**Visualizações:** `{views}`
-⏰**Publicado em:** {published}
-🎥**Nome do Canal:** {channel}
-📎**Link do Canal:** [Visite aqui]({channellink})
-🔗**Link do Vídeo:** [Clique aqui]({link})
+                searched_text = f"""💌 ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ
+> 🔍Informasi Lagu Video\n
+> ❇️ Judul: {title}
+> ⏳Durasi: {duration} Menit
+> 👀 Tayangan: `{views}`
+> ⏰ Diterbitkan pada: {published}
+> 🎥 Nama Channel: {channel}
+> 📎 Link Channel: [Kunjungi di sini]({channellink})
+> 🔗 Link Video: [Klik di sini]({link})
 """
+
 
             key = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="🎥 Assistir", url=f"{link}"),
-                        InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                        InlineKeyboardButton(text="🎥 Menonton", url=f"{link}"),
+                        InlineKeyboardButton(text="🔄 Kembali", callback_data="close"),
                     ],
                 ]
             )
@@ -195,7 +194,7 @@ async def start_comm(client: Client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"👤 {message.from_user.mention} acabou de iniciar o bot para verificar as <code> informações do vídeo </code>\n\n🆔 **ID do usuário:** {sender_id}\n📛 **Nome do usuário:** {sender_name}",
+                    f"💌 ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ\n> 👤 {message.from_user.mention} baru saja memulai bot untuk memeriksa <code> informasi video </code>\n> 🆔 ID Pengguna: {sender_id}\n> 📛 Nama Pengguna: {sender_name}",
                 )
     else:
         try:
@@ -226,7 +225,7 @@ async def start_comm(client: Client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"👤 {message.from_user.mention} iniciou o bot. \n\n🆔 **ID do usuário:** {sender_id}\n📛 **Nome do usuário:** {sender_name}",
+                f"💌 ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ\n> {message.from_user.mention} memulai bot.\n> 🆔 ID Pengguna: {sender_id}\n> 📛 Nama Pengguna: {sender_name}",
             )
 
 
@@ -246,7 +245,7 @@ async def welcome(_client: Client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**O modo privado deste bot foi ativado, apenas meu dono pode usá-lo. Se você quiser usar este bot no seu chat, peça ao meu dono para autorizar seu chat.**"
+                f"💌 ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ\n> Mode privat bot ini telah diaktifkan, hanya pemilik saya yang dapat menggunakannya. Jika Anda ingin menggunakan bot ini di obrolan Anda, mintalah pemilik saya untuk mengizinkan obrolan Anda."
             )
             return await app.leave_chat(message.chat.id)
     else:
@@ -293,23 +292,23 @@ async def welcome(_client: Client, message: Message):
 
 __MODULE__ = "Bot"
 __HELP__ = f"""
-<b>✦ c significa reprodução em canal.</b>
+<b>✦ c berarti pemutaran di saluran.</b>
 
-<b>★ {command("STATS_COMMAND")}</b> - Obtenha as Estatísticas Globais das 10 faixas mais tocadas, 10 principais usuários do bot, 10 principais chats no bot, 10 mais tocadas em um chat, etc.
+<b>★ {command("STATS_COMMAND")}</b> - Dapatkan Statistik Global dari 10 lagu yang paling sering dimainkan, 10 pengguna teratas bot, 10 obrolan teratas di bot, 10 yang paling sering dimainkan dalam obrolan, dll.
 
-<b>★ {command("SUDOUSERS_COMMAND")}</b> - Verifique os usuários Sudo do bot.
+<b>★ {command("SUDOUSERS_COMMAND")}</b> - Periksa pengguna Sudo dari bot.
 
-<b>★ {command("LYRICS_COMMAND")} [Nome da Música]</b> - Pesquise letras para uma música específica na web.
+<b>★ {command("LYRICS_COMMAND")} [Nama Lagu]</b> - Cari lirik untuk lagu tertentu di web.
 
-<b>★ {command("SONG_COMMAND")} [Nome da Faixa] ou [Link do YT]</b> - Baixe qualquer faixa do YouTube nos formatos MP3 ou MP4.
+<b>★ {command("SONG_COMMAND")} [Nama Lagu] atau [Tautan YT]</b> - Unduh lagu apa pun dari YouTube dalam format MP3 atau MP4.
 
-<b>★ {command("QUEUE_COMMAND")}</b> - Verifique a lista de músicas na fila.
+<b>★ {command("QUEUE_COMMAND")}</b> - Periksa daftar lagu dalam antrean.
 
-    <u><b>⚡️Bot Privado:</b></u>
+<u><b>⚡️Bot Pribadi:</b></u>
 
-<b>✧ {command("AUTHORIZE_COMMAND")} [ID_DO_CHAT]</b> - Permitir que um chat use o seu bot.
+<b>✧ {command("AUTHORIZE_COMMAND")} [ID_CHAT]</b> - Izinkan obrolan menggunakan bot Anda.
 
-<b>✧ {command("UNAUTHORIZE_COMMAND")} [ID_DO_CHAT]</b> - Bloquear um chat de usar o seu bot.
+<b>✧ {command("UNAUTHORIZE_COMMAND")} [ID_CHAT]</b> - Blokir obrolan agar tidak menggunakan bot Anda.
 
-<b>✧ {command("AUTHORIZED_COMMAND")}</b> - Verificar todos os chats permitidos do seu bot.
+<b>✧ {command("AUTHORIZED_COMMAND")}</b> - Periksa semua obrolan yang diizinkan untuk bot Anda.
 """

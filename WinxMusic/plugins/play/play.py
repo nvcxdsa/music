@@ -206,7 +206,7 @@ async def play_commnd(
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
                 return await mystic.edit_text(
-                    "🚫 Este bot não pode reproduzir faixas e playlists do Spotify. Por favor, entre em contato com meu dono e peça para ele adicionar o reprodutor de Spotify."
+                    "🚫 Bot ini tidak dapat memutar lagu dan playlist dari Spotify. Silakan hubungi pemilik saya dan minta dia untuk menambahkan pemutar Spotify."
                 )
             if "track" in url:
                 try:
@@ -516,18 +516,13 @@ async def play_commnd(
 
 __MODULE__ = "Play"
 __HELP__ = """
-<b>★ play, vplay, cplay</b> - Comandos Disponíveis
-<b>★ playforce, vplayforce, cplayforce</b> - Comandos de Reprodução Forçada
+> c berarti pemutaran di channel.
+> v berarti pemutaran video.
+> force berarti pemutaran paksa.
 
-<b>✦ c significa reprodução em canal.</b>
-<b>✦ v significa reprodução de vídeo.</b>
-<b>✦ force significa reprodução forçada.</b>
-
-<b>✧ /play ou /vplay ou /cplay</b> - O bot começará a reproduzir a consulta fornecida no chat de voz ou transmitirá links ao vivo nos chats de voz.
-
-<b>✧ /playforce ou /vplayforce ou /cplayforce</b> - A Reprodução Forçada interrompe a faixa atual no chat de voz e começa a tocar a faixa pesquisada instantaneamente sem alterar/limpar a fila.
-
-<b>✧ /channelplay [Nome de usuário ou ID do chat] ou [Desativar]</b> - Conecte um canal a um grupo e transmita música no chat de voz do canal a partir do seu grupo.
-
-<b>✧ /stream [url] </b> - Transmita uma URL que você acredita ser direta ou m3u8 e que não pode ser reproduzida pelo comando /play.
+📚 /play atau /vplay atau /cplay - Bot akan mulai memutar lagu yang diminta di obrolan suara atau menyiarkan tautan langsung di obrolan suara.
+📚 /playforce atau /vplayforce atau /cplayforce - Pemutaran Paksa menghentikan lagu yang sedang diputar di obrolan suara dan langsung memutar lagu yang dicari tanpa mengubah/menghapus antrean.
+📚 /channelplay [Nama pengguna atau ID obrolan] atau [Nonaktifkan] - Hubungkan kanal ke grup dan putar musik di obrolan suara kanal dari grup Anda.
+📚 /stream [url]  - Siarkan URL yang Anda yakini sebagai tautan langsung atau m3u8 yang tidak dapat diputar dengan perintah /play.
 """
+
