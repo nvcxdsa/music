@@ -100,7 +100,7 @@ async def gstats_global(_client: Client, message: Message, _):
         vidid,
     ) = await Platform.youtube.details(videoid, True)
     title = title.title()
-    final = f"🎶 **Faixas mais tocadas no {app.mention}** 🎶\n\n**Título:** {title}\n\nTocada **{co}** vezes"
+    final = f"🎶 **Lagu yang paling sering diputar di {app.mention}** 🎶\n\n**Judul:** {title}\n\nDiputar **{co}** kali"
     upl = get_stats_markup(_, True if message.from_user.id in SUDOERS else False)
     await app.send_photo(
         message.chat.id,
@@ -167,10 +167,9 @@ async def top_users_ten(_client: Client, callback_query: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🔗[TelegramVídeos e mídias](https://t.me/telegram) **Tocado {count} vezes**\n\n"
+                    msg += f"🔗[Video dan media Telegram](https://t.me/telegram) **Diputar {count} kali**\n\n"
                 else:
-                    msg += f"🔗 [{title}](https://www.youtube.com/watch?v={items}) **Tocado {count} vezes**\n\n"
-
+                    msg += f"🔗 [{title}](https://www.youtube.com/watch?v={items}) **Diputar {count} kali**\n\n"
             temp = (
                 _["gstats_4"].format(
                     queries,
@@ -207,7 +206,7 @@ async def top_users_ten(_client: Client, callback_query: CallbackQuery, _):
             except Exception:
                 continue
             limit += 1
-            msg += f"🔗`{extract}` Tocou {count} vezes no bot.\n\n"
+            msg += f"🔗`{extract}` Diputar {count} kali di bot.\n\n"
         temp = (
             _["gstats_5"].format(limit, app.mention)
             if what == "Chats"
@@ -249,25 +248,26 @@ async def overall_stats(_client: Client, callback_query: CallbackQuery, _):
     song = config.SONG_DOWNLOAD_DURATION
     play_duration = config.DURATION_LIMIT_MIN
     if config.AUTO_LEAVING_ASSISTANT == str(True):
-        ass = "Sim"
+        ass = "Ya"
     else:
-        ass = "Não"
-    text = f"""📊 **Estatísticas e informações do Bot:**
+        ass = "Tidak"
+    text = f"""📊 **Statistik dan Informasi Bot:**  
 
-🧩 **Módulos importados:** {mod}
-👥 **Chats atendidos:** {served_chats} 
-👤 **Usuários atendidos:** {served_users} 
-🚫 **Usuários bloqueados:** {blocked} 
-🔑 **Usuários Sudo:** {sudoers} 
+🧩 **Modul yang diimpor:** {mod}  
+👥 **Obrolan yang dilayani:** {served_chats}  
+👤 **Pengguna yang dilayani:** {served_users}  
+🚫 **Pengguna yang diblokir:** {blocked}  
+🔑 **Pengguna Sudo:** {sudoers}  
 
-🔍 **Total de Consultas:** {total_queries} 
-🤖 **Total de Assistentes:** {assistant}
-💨 **Assistente de Saída Automática:** {ass}
+🔍 **Total Pencarian:** {total_queries}  
+🤖 **Total Asisten:** {assistant}  
+💨 **Asisten Keluar Otomatis:** {ass}  
 
-⏳ **Duração de Reprodução:** {play_duration} minutos
-🎵 **Download de Música:** {song} minutos
-📀 **Playlist no Servidor do Bot:** {playlist_limit}
-🎶 **Reprodução de Playlist:** {fetch_playlist}"""
+⏳ **Durasi Pemutaran:** {play_duration} menit  
+🎵 **Unduhan Musik:** {song} menit  
+📀 **Playlist di Server Bot:** {playlist_limit}  
+🎶 **Pemutaran Playlist:** {fetch_playlist}"""  
+    
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await callback_query.edit_message_media(media=med, reply_markup=upl)
