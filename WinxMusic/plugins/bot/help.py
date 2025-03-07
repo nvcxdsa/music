@@ -176,17 +176,16 @@ async def help_button(client: Client, query: CallbackQuery):
         prev_page_num = int(chat_match.group(3))
         close = int(chat_match.group(4)) == 1
         text = (
-                f"<b><u>Aqui está a ajuda para {HELPABLE[module].__MODULE__}:</u></b>\n"
-                + HELPABLE[module].__HELP__
+            HELPABLE[module].__HELP__
         )
         key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="↪️ Kembali",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="🔄 Tutup", callback_data="close"),
                 ],
             ]
         )
@@ -201,17 +200,16 @@ async def help_button(client: Client, query: CallbackQuery):
         prev_page_num = int(mod_match.group(2))
         close = int(mod_match.group(3)) == 1
         text = (
-                f"<b><u>Aqui está a ajuda para {HELPABLE[module].__MODULE__}:</u></b>\n"
-                + HELPABLE[module].__HELP__
+            HELPABLE[module].__HELP__
         )
         key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="↪️ v",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="🔄 Tutup", callback_data="close"),
                 ],
             ]
         )
