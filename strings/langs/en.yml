@@ -35,16 +35,16 @@ auth_7: "**Authorized users list[aul]:**\n\n"
 auth_8: "┗ Added by:-"
 
 # PLUGINS - Admins
-admin_1: "🎶➻ Music is already paused!"
-admin_2: "🎶➻ Music is paused by {}!"
-admin_3: "🎶➻ Music is already resumed."
-admin_4: "🎶➻ Music is resumed by {}"
-admin_5: "🔇➻ Music is already muted"
-admin_6: "🔇➻ Music is muted by {}!"
-admin_7: "🔊➻ Music is already unmuted"
-admin_8: "🔊➻ Music is unmuted by {}!"
-admin_9: "⏹️➻ Music is ended/stopped by {}!"
-admin_10: "⏭️➻ Music is skipped by {}! No more music in queue"
+admin_1: "🎶 Music is already paused!"
+admin_2: "🎶 Music is paused by {}!"
+admin_3: "🎶 Music is already resumed."
+admin_4: "🎶 Music is resumed by {}"
+admin_5: "🔇 Music is already muted"
+admin_6: "🔇 Music is muted by {}!"
+admin_7: "🔊 Music is already unmuted"
+admin_8: "🔊 Music is unmuted by {}!"
+admin_9: "⏹️ Music is ended/stopped by {}!"
+admin_10: "⏭️ Music is skipped by {}! No more music in queue"
 admin_11: "❌ Error while changing stream to **{0}**\n\nPlease use /skip again."
 admin_12: "🚫 Unable to skip to a specific track because of enabled loop play. Please disable loop play via `/loop disable` to use this feature."
 admin_13: "🔢 Please use numeric numbers for specific tracks, like 1, 2 or 4 etc."
@@ -66,15 +66,14 @@ admin_28: "📏 Usage:\n/seek or /seekback [Duration in seconds]"
 admin_29: "🔢 Please use numeric duration seconds like 10-20-30 seconds for seeking"
 admin_30: "❌ Sorry but you can't seek the currently playing stream. It can only be skipped or stopped."
 admin_31: "🚫 Bot is not able to seek due to high duration given. You need to seek to a lower duration and remember that a time of 10 seconds is left after seeking.\n\nCurrently played **{0}** mins..."
-admin_32: "⏳➻ Please Wait... Seeking ongoing stream."
-admin_33: "✅➻ Successfully Seeked Stream to {0} Mins"
-admin_34: "❌➻ Failed to seek the current stream."
+admin_32: "⏳ Please Wait... Seeking ongoing stream."
+admin_33: "✅ Successfully Seeked Stream to {0} Mins"
+admin_34: "❌ Failed to seek the current stream."
 
-
-# Bot 
+# Bot
 
 # Start
-start_1: "Hey, I am {0} 🥀.\n\n➻ I'm a Telegram streaming bot with some useful features.\n\nSupporting platforms: YouTube, Spotify, SoundCloud etc.\n\nFeel free to add me to your groups."
+start_1: "Hey, I am {0} 🥀.\n\n I'm a Telegram streaming bot with some useful features.\n\nSupporting platforms: YouTube, Spotify, SoundCloud etc.\n\nFeel free to add me to your groups."
 start_2: "Hey,\n this is {0}\n\nA fast and powerful music player bot with some awesome features.\n\nAssistant username: @{1}\nAssistant ID: {2}"
 start_3: "The owner of {0}, {1} just joined your chat."
 start_4: "The sudo user of {0}, {1} just joined your chat."
@@ -110,7 +109,6 @@ set_cb_6: "⚙️ Setting up changes."
 set_cb_7: "🔄 Getting auth users list.. please wait."
 set_cb_8: "🔙 Getting back.."
 
-
 ustats_1: "🚫 No user stats found."
 ustats_2: "🎶 You have played **{0}** tracks till now with a whopping count of **{1}** times.\n\nTop **{2}** played by you:\n\n"
 
@@ -127,7 +125,7 @@ gstats_9: "**Global top 10 stats of the bot**\n\nSelect the buttons from below f
 gstats_10: "**Global stats of {0}**\n\nSelect the buttons from below for which you want to check global stats from bot's servers."
 gstats_11: "**General stats of {0}**\nSelect the buttons from below for which you want to check global stats from bot's servers.\n\nUse /gstats to check top tracks, chats, users, and many other stuffs."
 
-# Play 
+# Play
 # Play Callback Messages
 playcb_1: "🚫 This is not for you! Search your own."
 playcb_2: "🔄 Getting next result..."
@@ -161,7 +159,6 @@ play_17: "🚫 Unable to play this type of Spotify query!\n\nI can only play Spo
 play_18: "🔊 **No active voice chat**\n\nTo use force play, there must be an active voice chat."
 play_19: "I don't think that it is a streamable URL. If you believe that it is a streamable URL, please use /stream <url>."
 
-
 # Playlist
 playlist_1: "📋 **Usage:** /play [music name or YouTube link or reply to audio]\n\nIf you want to play the bot's server playlist! Press the button below."
 playlist_2: "🔄 Getting your playlist... please wait!"
@@ -189,15 +186,13 @@ playlist_23: "🗑️ All songs have been deleted from your playlist."
 playlist_24: "🪄 The song has been deleted from your playlist."
 playlist_25: "⏱️ Please wait\n🗑️ Deleting your playlist...."
 
-
 saavn_1: "😞 Sorry! Currently, the bot is unable to play the Saavn Podcast URL."
-
 
 # Playmode
 playmode_1: "🎮 Select the mode in which you want to play the queries inside your group [{0}]."
 playmode_2: "✅ Settings changed and saved successfully by {0}."
 
-# Stream 
+# Stream
 str_1: "🔗 Please provide m3u8 links or index links."
 str_2: "✅ Valid stream verified\n\nPlease wait processing link..."
 str_3: "❌ Unable to stream YouTube live streams. No live format found."
@@ -350,7 +345,6 @@ SA_B_5: "💡 Overall Stats"
 SA_B_6: "👤 User Stats"
 SA_B_7: "🔢 Global Top 10 Stats"
 SA_B_8: "🤖 Bot Stats"
-
 
 # Queue
 QU_B_1: "📋 Queued list"
