@@ -23,10 +23,8 @@ from WinxMusic.utils.inline.playlist import botplaylist_markup
 from WinxMusic.utils.logger import play_logs
 from WinxMusic.utils.stream.stream import stream
 from WinxMusic.utils.mustjoin import check_user_membership, generate_join_url
-from config import BANNED_USERS, lyrical, MUST_JOIN
+from config import BANNED_USERS, lyrical, MUST_JOIN_LINK, MUST_JOIN_ID
 from strings import get_command
-
-import time
 
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
@@ -53,20 +51,13 @@ async def play_commnd(
 ):
     try:
         user_id = message.from_user.id
-        is_member, membership_info = await check_user_membership(_client, user_id, MUST_JOIN)
+        is_member, membership_info = await check_user_membership(_client, user_id, MUST_JOIN_ID)
         if not is_member:
-            link = await generate_join_url(
-                _client,
-                chat_id=MUST_JOIN,
-                expire_date=int(time.time() + 86400),
-                member_limit=10,
-                creates_join_request=False
-            )
             buttons = [
                 [
                     InlineKeyboardButton(
                         "Join Group",
-                        url=link
+                        url=MUST_JOIN_LINK
                     )
                 ]
             ]
