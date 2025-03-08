@@ -32,14 +32,14 @@ async def must_join(client, message):
                         ]
                     ]
                     try:
-                        await message.reply_text(
-                            f"❗ **You must join @{username} to use this bot!**\n\nPlease join the group and try again.",
+                        await client.send_message(
+                            chat_id=message.chat.id,
+                            text=f"❗ **You must join @{username} to use this bot!**\n\nPlease join the group and try again.",
                             reply_markup=InlineKeyboardMarkup(buttons),
                             disable_web_page_preview=True
                         )
-                    except ChatWriteForbidden:
-                        pass
-                    await message.stop_propagation()
+                    except Exception as e:
+                        LOGGER(__name__).error(f"Failed to send join message: {e}")
                 return False
         except (ChatAdminRequired, ChatWriteForbidden):
             LOGGER(__name__).error(
