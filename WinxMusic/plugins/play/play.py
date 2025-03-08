@@ -51,7 +51,7 @@ async def play_commnd(
 ):
     try:
         user_id = message.from_user.id
-        is_member = await is_user_member(_client, user_id, MUST_JOIN_ID)
+        is_member = await is_user_member(app, user_id, MUST_JOIN_ID)
         if not is_member:
             buttons = [
                 [
