@@ -22,7 +22,7 @@ from WinxMusic.utils.inline.play import (
 from WinxMusic.utils.inline.playlist import botplaylist_markup
 from WinxMusic.utils.logger import play_logs
 from WinxMusic.utils.stream.stream import stream
-from WinxMusic.utils.mustjoin import must_join
+from WinxMusic.utils.mustjoin import check_user_membership
 from config import BANNED_USERS, lyrical, MUST_JOIN
 from strings import get_command
 
@@ -49,33 +49,28 @@ async def play_commnd(
         url: str,
         fplay: bool,
 ):
-    if MUST_JOIN:
-        is_joined = await must_join(_client, message)
-        if not is_joined:
-            username = MUST_JOIN
-            if username.startswith("@"):
-                username = username[1:]
-            if username.startswith("-100"):
-                user_id = int(username)
-            if message.chat.type in ["group", "supergroup"]:
-                    chat_name = (await _client.get_chat(user_id)).title
-                    buttons = [
-                        [
-                            InlineKeyboardButton(
-                                f"Join {chat_name}",
-                                url=f"https://t.me/{username}"
-                            )
-                        ]
-                    ]
-                    try:
-                        await _client.send_message(
-                            chat_id=message.chat.id,
-                            text=f"❗ **You must join @{username} to use this bot!**\n\nPlease join the group and try again.",
-                            reply_markup=InlineKeyboardMarkup(buttons),
-                            disable_web_page_preview=True
-                        )
-                    except Exception as e:
-                        LOGGER(__name__).error(f"Failed to send join message: {e}")
+    try:
+        user_id = message.from_user.id
+        is_member, membership_info = await check_user_membership(_client, user_id, MUST_JOIN)
+        if not is_member:
+            buttons = [
+                [
+                    InlineKeyboardButton(
+                        "Join Group",
+                        url=f"https://t.me/c/{str(MUST_JOIN)[4:]}"
+                    )
+                ]
+            ]
+            await message.reply_text(
+                "❗ **You must join our group to use this bot!**\n\n"
+                "Please join the group and try again.",
+                reply_markup=InlineKeyboardMarkup(buttons),
+                disable_web_page_preview=True
+            )
+            return 
+        return
+    except Exception as e:
+        await message.reply_text("An error occurred while processing your request.")
         
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
