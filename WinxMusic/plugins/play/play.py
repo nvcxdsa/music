@@ -22,7 +22,8 @@ from WinxMusic.utils.inline.play import (
 from WinxMusic.utils.inline.playlist import botplaylist_markup
 from WinxMusic.utils.logger import play_logs
 from WinxMusic.utils.stream.stream import stream
-from config import BANNED_USERS, lyrical
+from WinxMusic.utils.mustjoin import must_join
+from config import BANNED_USERS, lyrical, MUST_JOIN
 from strings import get_command
 
 PLAY_COMMAND = get_command("PLAY_COMMAND")
@@ -48,6 +49,11 @@ async def play_commnd(
         url: str,
         fplay: bool,
 ):
+    if MUST_JOIN:
+        is_joined = await must_join(_client, message)
+        if not is_joined:
+            return
+        
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
