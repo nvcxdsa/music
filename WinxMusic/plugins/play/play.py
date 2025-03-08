@@ -2,7 +2,7 @@ import random
 import string
 
 from pyrogram import filters, Client
-from pyrogram.types import InlineKeyboardMarkup, Message
+from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
 
 import config
 from WinxMusic import (
@@ -52,7 +52,30 @@ async def play_commnd(
     if MUST_JOIN:
         is_joined = await must_join(_client, message)
         if not is_joined:
-            return
+            username = MUST_JOIN
+            if username.startswith("@"):
+                username = username[1:]
+            if username.startswith("-100"):
+                user_id = int(username)
+            if message.chat.type in ["group", "supergroup"]:
+                    chat_name = (await _client.get_chat(user_id)).title
+                    buttons = [
+                        [
+                            InlineKeyboardButton(
+                                f"Join {chat_name}",
+                                url=f"https://t.me/{username}"
+                            )
+                        ]
+                    ]
+                    try:
+                        await _client.send_message(
+                            chat_id=message.chat.id,
+                            text=f"❗ **You must join @{username} to use this bot!**\n\nPlease join the group and try again.",
+                            reply_markup=InlineKeyboardMarkup(buttons),
+                            disable_web_page_preview=True
+                        )
+                    except Exception as e:
+                        LOGGER(__name__).error(f"Failed to send join message: {e}")
         
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
