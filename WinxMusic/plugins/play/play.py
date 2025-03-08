@@ -22,7 +22,7 @@ from WinxMusic.utils.inline.play import (
 from WinxMusic.utils.inline.playlist import botplaylist_markup
 from WinxMusic.utils.logger import play_logs
 from WinxMusic.utils.stream.stream import stream
-from WinxMusic.utils.mustjoin import check_user_membership
+from WinxMusic.utils.mustjoin import is_user_member
 from config import BANNED_USERS, lyrical, MUST_JOIN_LINK, MUST_JOIN_ID
 from strings import get_command
 
@@ -51,7 +51,7 @@ async def play_commnd(
 ):
     try:
         user_id = message.from_user.id
-        is_member, membership_info = await check_user_membership(_client, user_id, MUST_JOIN_ID)
+        is_member = await is_user_member(_client, user_id, MUST_JOIN_ID)
         if not is_member:
             buttons = [
                 [
