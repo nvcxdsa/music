@@ -1,5 +1,6 @@
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, FloodWait
 import asyncio
+import time
 
 async def check_user_membership(client, user_id, group_id):
     result = {
@@ -35,3 +36,17 @@ async def check_user_membership(client, user_id, group_id):
         result["status"] = "error"
         result["details"] = str(e)
     return result["is_member"], result
+
+async def generate_join_url(client, chat_id, expire_date=None, member_limit=None, creates_join_request=False):
+    try:
+        invite_link = await client.create_chat_invite_link(
+            chat_id=chat_id,
+            expire_date=expire_date,
+            member_limit=member_limit,
+            creates_join_request=creates_join_request
+        )
+        return invite_link.invite_link
+    except FloodWait as e:
+        pass
+    except Exception as e:
+        pass
