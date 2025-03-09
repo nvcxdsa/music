@@ -182,10 +182,10 @@ async def help_button(client: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Kembali",
+                        text="⬅️",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Tutup", callback_data="close"),
+                    InlineKeyboardButton(text="❎", callback_data="close"),
                 ],
             ]
         )
@@ -206,10 +206,10 @@ async def help_button(client: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ v",
+                        text="⬅️",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Tutup", callback_data="close"),
+                    InlineKeyboardButton(text="❎", callback_data="close"),
                 ],
             ]
         )
