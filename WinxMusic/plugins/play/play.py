@@ -543,9 +543,9 @@ __HELP__ = """
 > v berarti pemutaran video.
 > force berarti pemutaran paksa.
 
-📚 /play atau /vplay atau /cplay - Bot akan mulai memutar lagu yang diminta di obrolan suara atau menyiarkan tautan langsung di obrolan suara.
-📚 /playforce atau /vplayforce atau /cplayforce - Pemutaran Paksa menghentikan lagu yang sedang diputar di obrolan suara dan langsung memutar lagu yang dicari tanpa mengubah/menghapus antrean.
-📚 /channelplay [Nama pengguna atau ID obrolan] atau [Nonaktifkan] - Hubungkan kanal ke grup dan putar musik di obrolan suara kanal dari grup Anda.
-📚 /stream [url]  - Siarkan URL yang Anda yakini sebagai tautan langsung atau m3u8 yang tidak dapat diputar dengan perintah /play.
+🤖 /play atau /vplay atau /cplay - Bot akan mulai memutar lagu yang diminta di obrolan suara atau menyiarkan tautan langsung di obrolan suara.
+🤖 /playforce atau /vplayforce atau /cplayforce - Pemutaran Paksa menghentikan lagu yang sedang diputar di obrolan suara dan langsung memutar lagu yang dicari tanpa mengubah/menghapus antrean.
+🤖 /channelplay [Nama pengguna atau ID obrolan] atau [Nonaktifkan] - Hubungkan kanal ke grup dan putar musik di obrolan suara kanal dari grup Anda.
+🤖 /stream [url]  - Siarkan URL yang Anda yakini sebagai tautan langsung atau m3u8 yang tidak dapat diputar dengan perintah /play.
 """
 

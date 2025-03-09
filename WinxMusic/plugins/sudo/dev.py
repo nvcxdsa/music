@@ -212,19 +212,14 @@ def command(cmd: str):
 
 __MODULE__ = "Dev"
 __HELP__ = f"""
-<b><u>Adicionar e remover sudoers:</u></b>
-
-<b>{command("ADDSUDO_COMMAND")} [Nome de usuário ou responder a um usuário] - Adicionar sudo ao seu bot</b>
-<b>{command("DELSUDO_COMMAND")} [Nome de usuário, ID do usuário ou responder a um usuário] - Remover dos sudoers do bot</b>
-<b>{command("SUDOUSERS_COMMAND")} - Obter uma lista de todos os sudoers</b>
-
-<b><u>Comandos do Bot:</u></b>
-
-<b>{command("RESTART_COMMAND")}</b> - Reiniciar o bot (apenas SUDOERS)
-<b>{command("UPDATE_COMMAND")}</b> - Atualizar o bot
-<b>{command("SPEEDTEST_COMMAND")}</b> - Verificar a velocidade do servidor
-<b>{command("MAINTENANCE_COMMAND")} [ativar / desativar]</b> - Ativar ou desativar o modo de manutenção do bot
-<b>{command("LOGGER_COMMAND")} [ativar / desativar]</b> - Ativar ou desativar o registro de consultas pesquisadas no grupo de logs
-<b>{command("GETLOG_COMMAND")} [Número de linhas]</b> - Obter logs do servidor
-<b>{command("AUTOEND_COMMAND")} [ativar / desativar]</b> - Encerrar automaticamente a transmissão após 30 segundos se ninguém estiver ouvindo músicas
+🤖 {command("ADDSUDO_COMMAND")} [Nama pengguna atau balas ke pengguna] - Tambahkan sudo ke bot Anda
+🤖 {command("DELSUDO_COMMAND")} [Nama pengguna, ID pengguna, atau balas ke pengguna] - Hapus dari daftar sudoers bot
+🤖 {command("SUDOUSERS_COMMAND")} - Dapatkan daftar semua sudoers
+🤖 {command("RESTART_COMMAND")} - Restart bot (hanya untuk SUDOERS)
+🤖 {command("UPDATE_COMMAND")} - Perbarui bot
+🤖 {command("SPEEDTEST_COMMAND")} - Periksa kecepatan server
+🤖 {command("MAINTENANCE_COMMAND")} [aktifkan / nonaktifkan] - Aktifkan atau nonaktifkan mode pemeliharaan bot
+🤖 {command("LOGGER_COMMAND")} [aktifkan / nonaktifkan] - Aktifkan atau nonaktifkan pencatatan pencarian di grup log
+🤖 {command("GETLOG_COMMAND")} [Jumlah baris] - Dapatkan log dari server
+🤖 {command("AUTOEND_COMMAND")} [aktifkan / nonaktifkan] - Secara otomatis mengakhiri pemutaran setelah 30 detik jika tidak ada yang mendengarkan musik
 """

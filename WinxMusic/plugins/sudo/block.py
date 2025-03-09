@@ -86,17 +86,15 @@ async def sudoers_list(client, message: Message, _):
         return await mystic.edit_text(msg)
 
 
-__MODULE__ = "B-list"
+__MODULE__ = "Blacklist"
 __HELP__ = f"""
-<b>✧ {command("BLACKLISTCHAT_COMMAND")}</b> [ID do chat] - Bloquear qualquer chat de usar o Bot de Música.
-<b>✧ {command("WHITELISTCHAT_COMMAND")}</b> [ID do chat] - Desbloquear qualquer chat da lista de bloqueio para usar o Bot de Música.
-<b>✧ {command("BLACKLISTEDCHAT_COMMAND")}</b> - Verificar todos os chats bloqueados.
-
-<b>✧ {command("BLOCK_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Impede um usuário de usar comandos do bot.
-<b>✧ {command("UNBLOCK_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Remove um usuário da lista de bloqueio do bot.
-<b>✧ {command("BLOCKED_COMMAND")}</b> - Verificar a lista de usuários bloqueados.
-
-<b>✧ {command("GBAN_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Banir um usuário de todos os chats atendidos e impedir que ele use seu bot.
-<b>✧ {command("UNGBAN_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Remove um usuário da lista de banimento global e permite que ele use seu bot.
-<b>✧ {command("GBANNED_COMMAND")}</b> - Verificar a lista de usuários banidos globalmente.
+🤖 {command("BLACKLISTCHAT_COMMAND")} [ID obrolan] - Blokir obrolan mana pun agar tidak menggunakan Bot Musik.
+🤖 {command("WHITELISTCHAT_COMMAND")} [ID obrolan] - Membuka blokir obrolan dari daftar blokir agar dapat menggunakan Bot Musik.
+🤖 {command("BLACKLISTEDCHAT_COMMAND")} - Periksa semua obrolan yang diblokir.
+🤖 {command("BLOCK_COMMAND")} [Nama pengguna atau balas ke pengguna] - Mencegah pengguna menggunakan perintah bot.
+🤖 {command("UNBLOCK_COMMAND")} [Nama pengguna atau balas ke pengguna] - Menghapus pengguna dari daftar blokir bot.
+🤖 {command("BLOCKED_COMMAND")} - Periksa daftar pengguna yang diblokir.
+🤖 {command("GBAN_COMMAND")} [Nama pengguna atau balas ke pengguna] - Melarang pengguna dari semua obrolan yang dilayani dan mencegah mereka menggunakan bot Anda.
+🤖 {command("UNGBAN_COMMAND")} [Nama pengguna atau balas ke pengguna] - Menghapus pengguna dari daftar larangan global dan mengizinkan mereka menggunakan bot Anda.
+🤖 {command("GBANNED_COMMAND")} - Periksa daftar pengguna yang dilarang secara global.
 """

@@ -282,20 +282,14 @@ async def auto_clean():
 
 asyncio.create_task(auto_clean())
 
-__MODULE__ = "G cast"
+__MODULE__ = "Gcast"
 __HELP__ = f"""
-<b>{command("BROADCAST_COMMAND")} [Mensagem ou Responder a qualquer mensagem]</b> » Transmite uma mensagem para os chats atendidos pelo bot.
-<u>Modos de Transmissão:</u>
+<code>-pin</code> » Menyematkan pesan yang disiarkan di obrolan yang dilayani.
+<code>-pinloud</code> » Menyematkan pesan yang disiarkan di obrolan yang dilayani dan mengirim notifikasi kepada anggota.
+<code>-user</code> » Menyiarkan pesan kepada pengguna yang memulai bot Anda [Anda juga bisa menyematkan pesan menggunakan -pin atau -pinloud].
+<code>-assistant</code> » Menyiarkan pesan melalui semua Asisten bot.
+<code>-nobot</code> » Memaksa bot untuk tidak menyiarkan pesan [Berguna jika Anda tidak ingin mengirimkan pesan ke grup].
+Contoh: <code>/broadcast -user -assistant -pin Menguji siaran</code>
 
-<b><code>-pin</code></b> » Fixa sua mensagem transmitida nos chats atendidos.
-
-<b><code>-pinloud</code></b> » Fixa sua mensagem transmitida nos chats atendidos e envia uma notificação para os membros.
-
-<b><code>-user</code></b> » Transmite a mensagem para quem iniciou o seu bot [Você também pode fixar a mensagem usando `-pin` ou `-pinloud`].
-
-<b><code>-assistant</code></b> » Transmite sua mensagem através de todos os Assistentes do bot.
-
-<b><code>-nobot</code></b> » Força o **bot** a não transmitir a mensagem [Útil quando você não deseja transmitir a mensagem para grupos].
-
-> <b>Exemplo:</b> <code>/broadcast -user -assistant -pin Testando transmissão</code>
+🤖 {command("BROADCAST_COMMAND")} [Pesan atau Balas ke pesan apa pun] » Menyiarkan pesan ke obrolan yang dilayani oleh bot.
 """

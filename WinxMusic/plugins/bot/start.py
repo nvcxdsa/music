@@ -292,23 +292,14 @@ async def welcome(_client: Client, message: Message):
 
 __MODULE__ = "Bot"
 __HELP__ = f"""
-<b>✦ c berarti pemutaran di saluran.</b>
+c berarti pemutaran di saluran.
 
-<b>★ {command("STATS_COMMAND")}</b> - Dapatkan Statistik Global dari 10 lagu yang paling sering dimainkan, 10 pengguna teratas bot, 10 obrolan teratas di bot, 10 yang paling sering dimainkan dalam obrolan, dll.
-
-<b>★ {command("SUDOUSERS_COMMAND")}</b> - Periksa pengguna Sudo dari bot.
-
-<b>★ {command("LYRICS_COMMAND")} [Nama Lagu]</b> - Cari lirik untuk lagu tertentu di web.
-
-<b>★ {command("SONG_COMMAND")} [Nama Lagu] atau [Tautan YT]</b> - Unduh lagu apa pun dari YouTube dalam format MP3 atau MP4.
-
-<b>★ {command("QUEUE_COMMAND")}</b> - Periksa daftar lagu dalam antrean.
-
-<u><b>⚡️Bot Pribadi:</b></u>
-
-<b>✧ {command("AUTHORIZE_COMMAND")} [ID_CHAT]</b> - Izinkan obrolan menggunakan bot Anda.
-
-<b>✧ {command("UNAUTHORIZE_COMMAND")} [ID_CHAT]</b> - Blokir obrolan agar tidak menggunakan bot Anda.
-
-<b>✧ {command("AUTHORIZED_COMMAND")}</b> - Periksa semua obrolan yang diizinkan untuk bot Anda.
+🤖 {command("STATS_COMMAND")} - Dapatkan Statistik Global dari 10 lagu yang paling sering dimainkan, 10 pengguna teratas bot, 10 obrolan teratas di bot, 10 yang paling sering dimainkan dalam obrolan, dll.
+🤖 {command("SUDOUSERS_COMMAND")} - Periksa pengguna Sudo dari bot.
+🤖 {command("LYRICS_COMMAND")} [Nama Lagu] - Cari lirik untuk lagu tertentu di web.
+🤖 {command("SONG_COMMAND")} [Nama Lagu] atau [Tautan YT] - Unduh lagu apa pun dari YouTube dalam format MP3 atau MP4.
+🤖 {command("QUEUE_COMMAND")} - Periksa daftar lagu dalam antrean.
+🤖 {command("AUTHORIZE_COMMAND")} [ID_CHAT] - Izinkan obrolan menggunakan bot Anda.
+🤖 {command("UNAUTHORIZE_COMMAND")} [ID_CHAT] - Blokir obrolan agar tidak menggunakan bot Anda.
+🤖 {command("AUTHORIZED_COMMAND")} - Periksa semua obrolan yang diizinkan untuk bot Anda.
 """

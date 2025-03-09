@@ -88,13 +88,10 @@ async def vc(client, message: Message):
     await message.reply_text(f"<b>Chats Ativos</b>: {ac_audio}")
 
 
-__MODULE__ = "Ativo"
-__HELP__ = f"""
-<b>✧ {command("AC_COMMAND")}</b> - Verificar os chats de voz ativos no bot.
-
-<b>✧ {command("ACTIVEVC_COMMAND")}</b> - Verificar as chamadas de voz e vídeo ativas no bot.
-
-<b>✧ {command("ACTIVEVIDEO_COMMAND")}</b> - Verificar as chamadas de vídeo ativas no bot.
-
-<b>✧ {command("STATS_COMMAND")}</b> - Verificar as estatísticas do bot.
+__MODULE__ = "Active"
+HELP = f"""
+🤖 {command("AC_COMMAND")} - Periksa obrolan suara yang aktif di bot.
+🤖 {command("ACTIVEVC_COMMAND")} - Periksa panggilan suara dan video yang aktif di bot.
+🤖 {command("ACTIVEVIDEO_COMMAND")} - Periksa panggilan video yang aktif di bot.
+🤖 {command("STATS_COMMAND")} - Periksa statistik bot.
 """
