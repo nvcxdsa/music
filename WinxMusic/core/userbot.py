@@ -38,11 +38,11 @@ class Userbot(Client):
             await client.start()
             assistants.append(index)
             try:
-                await notification(client, config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
+                await notification(config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
             except ChatWriteForbidden:
                 try:
                     await client.join_chat(config.LOG_GROUP_ID)
-                    await notification(client, config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
+                    await notification(config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
                 except Exception:
                     LOGGER(__name__).error(
                         f"Assistant Account {index} failed to send message in log group. "
