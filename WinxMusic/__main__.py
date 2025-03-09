@@ -9,6 +9,7 @@ from WinxMusic.core.call import Winx
 from WinxMusic.plugins import ALL_MODULES
 from WinxMusic.utils.cache.cache_manager import CacheManager
 from WinxMusic.utils.database import get_banned_users, get_gbanned
+from WinxMusic.utils.notification import notification
 from config import BANNED_USERS
 
 cache_manager = CacheManager(max_size=100, ttl=3600)
@@ -34,6 +35,8 @@ async def init():
     except Exception:
         pass
     await app.start()
+    text = f"{app.mention} ᴅɪᴊᴀʟᴀɴᴋᴀɴ\nɪᴅ : {app.id}\nɴᴀᴍᴀ : {app.name}\nᴜꜱᴇʀɴᴀᴍᴇ : @{app.username}"
+    await notification(app, config.LOG_GROUP_ID, text)
 
     for all_module in ALL_MODULES:
         imported_module = importlib.import_module(all_module)

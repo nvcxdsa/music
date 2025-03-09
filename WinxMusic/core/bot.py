@@ -30,7 +30,6 @@ from pyrogram.errors import (
     ChatWriteForbidden,
 )
 from pyrogram.handlers import MessageHandler
-from WinxMusic.utils import notification
 
 import config
 
@@ -108,9 +107,8 @@ class WinxBot(Client):
         self.id = get_me.id
         self.name = f"{get_me.first_name} {get_me.last_name or ''}"
         self.mention = get_me.mention
-        text = f"{self.mention} ᴅɪᴊᴀʟᴀɴᴋᴀɴ\nɪᴅ : {self.id}\nɴᴀᴍᴀ : {self.name}\nᴜꜱᴇʀɴᴀᴍᴇ : @{self.username}"
         try:
-            await notification(self, config.LOG_GROUP_ID, text)
+            pass
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
                 "Bot failed to access the log group. Ensure the bot is added and promoted as admin."
