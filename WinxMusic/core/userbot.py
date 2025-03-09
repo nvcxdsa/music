@@ -14,6 +14,7 @@ from pyrogram.errors import (
     ChatWriteForbidden,
 )
 from pyrogram.handlers import MessageHandler
+from WinxMusic.utils import notification
 import config
 
 from ..logging import LOGGER
@@ -37,11 +38,11 @@ class Userbot(Client):
             await client.start()
             assistants.append(index)
             try:
-                await client.send_message(config.LOG_GROUP_ID, "Assistant Started")
+                await notification(client, config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
             except ChatWriteForbidden:
                 try:
                     await client.join_chat(config.LOG_GROUP_ID)
-                    await client.send_message(config.LOG_GROUP_ID, "Assistant Started")
+                    await notification(client, config.LOG_GROUP_ID, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴅɪᴊᴀʟᴀɴᴋᴀɴ")
                 except Exception:
                     LOGGER(__name__).error(
                         f"Assistant Account {index} failed to send message in log group. "
@@ -55,15 +56,8 @@ class Userbot(Client):
             client.mention = get_me.mention
             assistant_ids.append(get_me.id)
             client.name = f"{get_me.first_name} {get_me.last_name or ''}".strip()
-
-            # Add stored handlers to the client
             for handler, group in self.handlers:
                 client.add_handler(handler, group)
-
-            # await client.join_chat("@cinewinxy")
-            # await client.join_chat("@cinewinxcoments")
-            # await client.join_chat("@canalclubdaswinx")
-
         except Exception as e:
             LOGGER(__name__).error(
                 f"Assistant Account {index} failed with error: {str(e)}. Exiting..."
