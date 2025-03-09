@@ -3,6 +3,7 @@ import string
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant
 
 import config
 from WinxMusic import (
@@ -22,12 +23,20 @@ from WinxMusic.utils.inline.play import (
 from WinxMusic.utils.inline.playlist import botplaylist_markup
 from WinxMusic.utils.logger import play_logs
 from WinxMusic.utils.stream.stream import stream
-from WinxMusic.utils.mustjoin import is_user_member
 from config import BANNED_USERS, lyrical, MUST_JOIN_LINK, MUST_JOIN_ID
 from strings import get_command
 
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
+async def check_user_joined(client, user_id):
+    try:
+        await client.get_chat_member(MUST_JOIN_ID, user_id)
+        return True
+    except UserNotParticipant:
+        return False
+    except Exception as e:
+        LOGGER(__name__).error(f"Error checking user membership: {e}")
+        return False
 
 @app.on_message(
     filters.command(
@@ -49,27 +58,17 @@ async def play_commnd(
         url: str,
         fplay: bool,
 ):
-    try:
-        user_id = message.from_user.id
-        is_member = await is_user_member(app, user_id, MUST_JOIN_ID)
-        if not is_member:
-            buttons = [
-                [
-                    InlineKeyboardButton(
-                        "Join Group",
-                        url=MUST_JOIN_LINK
-                    )
-                ]
-            ]
-            await message.reply_text(
-                "Silahkan join grup dan coba lagi.",
-                reply_markup=InlineKeyboardMarkup(buttons),
-                disable_web_page_preview=True
-            )
-            return 
-        return
-    except Exception as e:
-        await message.reply_text("An error occurred while processing your request.")
+    is_member = await check_user_joined(_client, message.from_user.id)
+    if not is_member:
+        join_button = InlineKeyboardButton(
+            "ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ",
+            url=MUST_JOIN_LINK
+        )
+        keyboard = InlineKeyboardMarkup([[join_button]])
+        return await message.reply_text(
+            f"💌 ɴᴏᴛɪꜰɪᴄᴀᴛɪᴏɴ\n> ʜᴀʟᴏ {message.from_user.mention}. ᴀɴᴅᴀ ʜᴀʀᴜs ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ʙɪsᴀ ᴘʟᴀʏ ᴍᴜsɪᴄ ❤️",
+            reply_markup=keyboard
+        )
         
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
