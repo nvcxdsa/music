@@ -721,30 +721,18 @@ async def stop_download(_client: Client, callback_query: CallbackQuery, _):
 
 __MODULE__ = "Admin"
 __HELP__ = f"""
-<blockquote>c berarti pemutaran di Channel</blockquote>
+c berarti pemutaran di Channel
 
-🤖 {command("PAUSE_COMMAND")}
-<blockquote>📚 Jeda musik yang sedang diputar.</blockquote>
-🤖 {command("RESUME_COMMAND")}
-<blockquote>📚 Lanjutkan musik yang dijeda.</blockquote>
-🤖 {command("MUTE_COMMAND")}
-<blockquote>📚 Bisukan musik yang sedang diputar.</blockquote>
-🤖 {command("UNMUTE_COMMAND")}
-<blockquote>📚 Buka bisu musik yang dibisukan.</blockquote>
-🤖 {command("SKIP_COMMAND")}
-<blockquote>📚 Lewati musik yang sedang diputar.</blockquote>
-🤖 {command("STOP_COMMAND")}
-<blockquote>📚 Hentikan musik yang sedang diputar.</blockquote>
-🤖 {command("SHUFFLE_COMMAND")}
-<blockquote>📚 Acak secara random playlist/lagu dalam antrean.</blockquote>
-🤖 {command("SEEK_COMMAND")}
-<blockquote>📚 Majukan musik ke titik tertentu.</blockquote>
-🤖 {command("SEEK_COMMAND")}
-<blockquote>📚 Kembalikan musik ke titik tertentu.</blockquote>
-🤖 {command("REBOOT_COMMAND")}
-<blockquote>📚 Restart bot untuk obrolan Anda.</blockquote>
-🤖 {command("SKIP_COMMAND")} [Nomor (Contoh: 3)]
-<blockquote>📚 Lewati musik ke nomor tertentu. Contoh: <b>/skip 3 akan melompat ke lagu ketiga dalam antrean dan melewati lagu ke-1 dan ke-2.</blockquote>
-🤖 {command("LOOP_COMMAND")} [Aktifkan/Nonaktifkan] atau [Angka antara 1-10]
-<blockquote>📚 Jika diaktifkan, bot akan mengulang lagu saat ini sebanyak 1 hingga 10 kali di obrolan suara. Nilai default adalah 10 kali.</blockquote>
+🤖 {command("PAUSE_COMMAND")} - Jeda musik yang sedang diputar.
+🤖 {command("RESUME_COMMAND")} - Lanjutkan musik yang dijeda.
+🤖 {command("MUTE_COMMAND")} - Bisukan musik yang sedang diputar.
+🤖 {command("UNMUTE_COMMAND")} - Buka bisu musik yang dibisukan.
+🤖 {command("SKIP_COMMAND")} - Lewati musik yang sedang diputar.
+🤖 {command("STOP_COMMAND")} - Hentikan musik yang sedang diputar.
+🤖 {command("SHUFFLE_COMMAND")} - Acak secara random playlist/lagu dalam antrean.
+🤖 {command("SEEK_COMMAND")} - Majukan musik ke titik tertentu.
+🤖 {command("SEEK_COMMAND")} - Kembalikan musik ke titik tertentu.
+🤖 {command("REBOOT_COMMAND")} - Restart bot untuk obrolan Anda.
+🤖 {command("SKIP_COMMAND")} [Nomor (Contoh: 3)] - Lewati musik ke nomor tertentu. Contoh: <b>/skip 3 akan melompat ke lagu ketiga dalam antrean dan melewati lagu ke-1 dan ke-2.
+🤖 {command("LOOP_COMMAND")} [Aktifkan/Nonaktifkan] atau [Angka antara 1-10] - Jika diaktifkan, bot akan mengulang lagu saat ini sebanyak 1 hingga 10 kali di obrolan suara. Nilai default adalah 10 kali.
 """
