@@ -108,7 +108,8 @@ class WinxBot(Client):
         self.name = f"{get_me.first_name} {get_me.last_name or ''}"
         self.mention = get_me.mention
         try:
-            pass
+            text = f"{self.mention} ᴅɪᴊᴀʟᴀɴᴋᴀɴ\nɪᴅ : {self.id}\nɴᴀᴍᴀ : {self.name}\nᴜꜱᴇʀɴᴀᴍᴇ : @{self.username}"
+            await self.send_message(config.LOG_GROUP_ID, text)
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
                 "Bot failed to access the log group. Ensure the bot is added and promoted as admin."
