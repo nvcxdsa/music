@@ -3,7 +3,7 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/gabrielmaialva33/flora-music-bot && cd flora-music-bot
+   git clone https://github.com/iamnolimit/mirai-streams-bot && cd mirai-streams-bot
    ```
 
 2. **Run the setup**
