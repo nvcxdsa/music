@@ -73,7 +73,7 @@ admin_34: "❌ Failed to seek the current stream."
 # Bot
 
 # Start
-start_1: "<blockquote>Hey, I am {0} 🥀.\n\n I'm a Telegram streaming bot with some useful features.\n\nFeel free to add me to your groups.</blockquote>"
+start_1: "<blockquote>Hey, I am {0}.\n Your Ultimate Telegram Music Streaming Bot,Here To Bring Non-Stop Tunes To Your Chats. Just Add Me To Your Group And Start Playing Your Favorite Tracks. Let's Turn Up The Vibes.</blockquote>"
 start_2: "Hey,\n this is {0}\n\nA fast and powerful music player bot with some awesome features.\n\nAssistant username: @{1}\nAssistant ID: {2}"
 start_3: "The owner of {0}, {1} just joined your chat."
 start_4: "The sudo user of {0}, {1} just joined your chat."
@@ -139,7 +139,7 @@ cplay_5: "🚫 Only channels are supported."
 cplay_6: "🔑 You need to be the **owner** of the channel [{0}] to connect it with this group.\n**Channel's owner:** @{1}\n\nAlternatively, you can link your group to that channel and then try connecting with `/channelplay linked`."
 
 # Play Messages
-play_1: "🔄 **Processing...**"
+play_1: "🔄 **Processing♪♪♪**"
 play_2: "📺 **Channel play mode**\nProcessing query... please wait!\n\n**Linked channel:** {0}"
 play_3: "❌ Failed to process query!"
 play_4: "🔒 **Admins only play**\nOnly admins and auth users can play music in this group.\n\nChange mode via /playmode and if you're already admin, reload admincache via /admincache or /reload."
@@ -260,12 +260,12 @@ L_B_1: "🎶 Check out lyrics now"
 # Start
 S_B_1: "🗒 Command"
 S_B_2: "🔧 Setting"
-S_B_3: "📨 Support"
-S_B_4: "📨 Channel"
+S_B_3: "💌 Support"
+S_B_4: "🛍 Store"
 S_B_5: "✚ Add me to your Group ✚"
 S_B_6: "💡 Git Repo"
-S_B_7: "👤 Owner"
-S_B_8: "🔎 How to use? Command Menu"
+S_B_7: "🇲🇨 Owner"
+S_B_8: "📚 Command Menu"
 
 #PlayMode
 PM_B_1: "Direct play"
