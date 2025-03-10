@@ -21,7 +21,7 @@ BOT_TOKEN = getenv("BOT_TOKEN", "6336197636:AAFZHOL3JziHxI-1REUHPQSxYFnxkvBA4uU"
 OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
 
 # You can paste your cookies to https://batbin.me, save them, and get a link to paste here
-COOKIE_LINK = getenv("COOKIE_LINK", None)
+COOKIE_LINK = getenv("COOKIE_LINK", "https://batbin.me/tenacious")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vii123:vii123@cluster0.ifqluq2.mongodb.net/?retryWrites=true&w=majority")
