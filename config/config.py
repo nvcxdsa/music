@@ -56,7 +56,7 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002022625433"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002429299234"))
 
 # Your User ID.
 OWNER_ID = list(
@@ -90,7 +90,7 @@ SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/vstreid"
 )  # Example:- https://t.me/cinewinx
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/viicombot"
+    "SUPPORT_GROUP", "https://files.catbox.moe/a6pq3i.jpg"
 )  # Example:- https://t.me/cinewinxcoments
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
