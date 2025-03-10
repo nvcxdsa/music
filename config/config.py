@@ -8,23 +8,23 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "22745137"))
+API_HASH = getenv("API_HASH", "295d9954f2f97040188c0916cfca449f")
 
-MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002332086677"))
-MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/basezoneid")
+MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002060678260"))
+MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/vstreid")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "6336197636:AAFZHOL3JziHxI-1REUHPQSxYFnxkvBA4uU")
 
 # Get it from https://openai.com
-OPENAI_API_KEY = getenv("OPENAI_API_KEY", "")
+OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
 
 # You can paste your cookies to https://batbin.me, save them, and get a link to paste here
 COOKIE_LINK = getenv("COOKIE_LINK", None)
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vii123:vii123@cluster0.ifqluq2.mongodb.net/?retryWrites=true&w=majority")
 
 # Clan mode for voice chats. If you want to enable this feature, set it to True.
 CLEANMODE_DELETE_MINS = int(
@@ -56,11 +56,11 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002022625433"))
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "").split())
+    map(int, getenv("OWNER_ID", "728409811").split())
 )  # Input type must be interger
 
 # make your bots privacy from telegra.ph and put your url here
@@ -87,14 +87,14 @@ GIT_TOKEN = getenv("GIT_TOKEN", "")
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", ""
+    "SUPPORT_CHANNEL", "https://t.me/vstreid"
 )  # Example:- https://t.me/cinewinx
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", ""
+    "SUPPORT_GROUP", "https://t.me/viicombot"
 )  # Example:- https://t.me/cinewinxcoments
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", True) #False
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
