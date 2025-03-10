@@ -189,7 +189,7 @@ START_IMG_URL = getenv(
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://telegra.ph/file/91533956c91d0fd7c9f20.jpg",
+    "https://files.catbox.moe/y1jk6a.mp4",
 )
 
 PLAYLIST_IMG_URL = getenv(
@@ -293,7 +293,7 @@ if GITHUB_REPO:
 if PING_IMG_URL:
     if (
         PING_IMG_URL
-        != "https://telegra.ph/file/91533956c91d0fd7c9f20.jpg"
+        != "https://files.catbox.moe/y1jk6a.mp4"
     ):
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
