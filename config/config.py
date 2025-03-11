@@ -8,8 +8,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "22745137"))
-API_HASH = getenv("API_HASH", "295d9954f2f97040188c0916cfca449f")
+API_ID = int(getenv("API_ID", "20297305"))
+API_HASH = getenv("API_HASH", "81031095410ca8ce872d5cddd3634f85")
 
 MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002060678260"))
 MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/vstreid")
