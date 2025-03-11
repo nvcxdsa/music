@@ -149,7 +149,7 @@ SET_CMDS = getenv("SET_CMDS", "False")
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @WinxStringBot
 # Get the environment variable with a default value of an empty string
-raw_sessions = getenv("STRING_SESSIONS", "AQFagT8Au9402rSBsQqQ6z3QHf40cRe0H_3uCkFLkryXKWuNxPNbfai1lP0qP1-9jquEYSeFmYG1Y-fTw0iJfLuBHgsowujZHRMwCLvp_f56WwoIOOZc6TeiLwYFSSu8RUC-kn-L0Ls9-JlaAVZulK-MAs3LCLKGMH1QhG40YNsWQJlCxzzrhxPHTjy713rwxAPjNlZpPspjwrIO7EIxg4KDDwNhRPJd6atXtPKZS1o_R6zyCwFH9SstdvDQIEVDrqgNlNTY6rIlkGAjZrmD0krji0X3uoLRHMcCsuTBY1dppyF9XXAs_ovELITEHP6SGko9vf-1IhJ535SdK7d5QI72hjio6gAAAAGquV4LAA")
+raw_sessions = getenv("STRING_SESSIONS", "BQE1tlkABL48NJAns_0yY1op1y7nwUBqu1qKc0l2y6phDl6FqoIapVGUsgh131g3GZm_46VeVVETf62INJaoZkOmCTwdwRmSOW1e2rOtoOREGDkXwIxukUTqLUuoO_Zac762aVV6kbLoGibldaEtgddwv0wAUMBIA6Ku-TxTGt5m4k32tRvnFgyOewBmJDbhlE116qQJRRWqmoCsEqcWGIMaV6t_i5P2mx2vs4LpZeZYZUahoELqIkagpzU_KpBGLjRAuen4x6PDX1JMHFbsBHwZDgXHBL20Wyn4f14dgLB2eLbXilT2L-ZERZCAlmURUOex2g4A6IS97aU9D2xWqqDtst-dVwAAAAA9NBiQAA")
 # Split the sessions only if raw_sessions is not empty
 STRING_SESSIONS = list(map(str.strip, raw_sessions.split(","))) if raw_sessions else []
 
