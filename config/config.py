@@ -15,7 +15,7 @@ MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002060678260"))
 MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/vstreid")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6336197636:AAFZHOL3JziHxI-1REUHPQSxYFnxkvBA4uU")
+BOT_TOKEN = getenv("BOT_TOKEN", "7369580329:AAGjweifNIJpm9ssgOp9TosJNkmBwjTCM18")
 
 # Get it from https://openai.com
 OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
@@ -24,7 +24,7 @@ OPENAI_API_KEY = getenv("OPENAI_API_KEY", "sk-n5wk7GogHn2Sz8jnZpT4T3BlbkFJUmL7NF
 COOKIE_LINK = getenv("COOKIE_LINK", "https://batbin.me/tenacious")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vii123:vii123@cluster0.ifqluq2.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://yuzimusicbot:i8RaqHtZFvvlP4GZ@cluster0.2ukrc.mongodb.net/?retryWrites=true&w=majority")
 
 # Clan mode for voice chats. If you want to enable this feature, set it to True.
 CLEANMODE_DELETE_MINS = int(
@@ -60,7 +60,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002429299234"))
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "728409811").split())
+    map(int, getenv("OWNER_ID", "7756182503").split())
 )  # Input type must be interger
 
 # make your bots privacy from telegra.ph and put your url here
@@ -78,7 +78,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/viicombot/VMusicBot.git"
+    "UPSTREAM_REPO", "https://github.com/viicombot/yuzimusicbot.git"
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
@@ -183,7 +183,7 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://files.catbox.moe/0a8adt.jpg",
+    "https://files.catbox.moe/ku6cg5.jpg",
     # This is the file id of the photo you can also put the url of photo
 )
 
