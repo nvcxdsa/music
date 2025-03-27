@@ -29,3 +29,4 @@ kurigram==2.1.37
 pykeyboard2
 https://github.com/KSKOP69/youtube-search-python/archive/ksk.zip
 git+https://github.com/Vivekkumar-IN/pykeyboard
+py-yt-search>=0.2
