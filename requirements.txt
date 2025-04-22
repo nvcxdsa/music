@@ -23,10 +23,11 @@ uvloop
 flask
 gunicorn
 youtube-search-python
-yt-dlp==2025.1.15
+yt-dlp==2025.3.31
 openai
 kurigram==2.1.37
 pykeyboard2
 https://github.com/KSKOP69/youtube-search-python/archive/ksk.zip
 git+https://github.com/Vivekkumar-IN/pykeyboard
 py-yt-search>=0.2
+youtube_search_python
