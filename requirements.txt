@@ -23,7 +23,8 @@ uvloop
 flask
 gunicorn
 youtube-search-python
-git+https://github.com/yt-dlp/yt-dlp@master
+#git+https://github.com/yt-dlp/yt-dlp@master
+yt-dlp==2025.6.8.232939.dev.0
 openai
 kurigram==2.1.37
 pykeyboard2
