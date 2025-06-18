@@ -8,14 +8,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "20297305"))
-API_HASH = getenv("API_HASH", "81031095410ca8ce872d5cddd3634f85")
+API_ID = int(getenv("API_ID", "20245305"))
+API_HASH = getenv("API_HASH", "81031095410ca8ce872d5679754634f85")
 
 MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002060678260"))
 MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/vstreid")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "7369580329:AAGjweifNIJpm9ssgOp9TosJNkmBwjTCM18")
+BOT_TOKEN = getenv("BOT_TOKEN", "7369799329:AAGjweifNI46886435788TosJNkmBwjTCM18")
 
 # Get it from https://openai.com
 OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
@@ -24,7 +24,7 @@ OPENAI_API_KEY = getenv("OPENAI_API_KEY", "sk-n5wk7GogHn2Sz8jnZpT4T3BlbkFJUmL7NF
 COOKIE_LINK = getenv("COOKIE_LINK", "https://batbin.me/tenacious")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://yuzimusicbot:i8RaqHtZFvvlP4GZ@cluster0.2ukrc.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vmudiboyt:i8Raqtdfvjj4GZ@cluster0.2ukrc.mongodb.net/?retryWrites=true&w=majority")
 
 # Clan mode for voice chats. If you want to enable this feature, set it to True.
 CLEANMODE_DELETE_MINS = int(
@@ -149,7 +149,7 @@ SET_CMDS = getenv("SET_CMDS", "False")
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @WinxStringBot
 # Get the environment variable with a default value of an empty string
-raw_sessions = getenv("STRING_SESSIONS", "BQFsFGUAsn8rEd_O2RkmrmOB9ZZL5h53d9HHYcf_iMCOTJ9GH3eKI9oLDO3FuxDNbJITPIlKTtzx9q0IfkA_eHHwh8I_Rbjxf7sxCXp6CwrWUvhsZ_qXNgMGGgg-gsX_I_hlMngzVddOrSP1ooFpZJl5YQcxtmjuZ-jaYbWFwAYgc02_W60XTHeZv3M9X8hLvxzfnlztu5w5XyepddPBf6o-GRHHcD9vn_VtAaabMTkmeXkiX5TmqUB8AkcW7nksWhA8j4Iws1eWtw12BcrEqjhVuG6c4su28xhP7FH5g3epsLz6ooGBKNyPGyK2qoPPE0NGUUGL5irWmjevZnqXuNNn_gBiYwAAAAFmy4pOAA")
+raw_sessions = getenv("STRING_SESSIONS", "BQFsFGUAsn8rEd_728292929929292929_iMCOTJ9GH3eKI9oLDO3FuxDNbJITPIlKTtzx9q0IfkA_eHHwh8I_Rbjxf7sxCXp6CwrWUvhsZ_qXNgMGGgg-gsX_I_hlMngzVddOrSP1ooFpZJl5YQcxtmjuZ-jaYbWFwAYgc02_W60XTHeZv3M9X8hLvxzfnlztu5w5XyepddPBf6o-GRHHcD9vn_VtAaabMTkmeXkiX5TmqUB8AkcW7nksWhA8j4Iws1eWtw12BcrEqjhVuG6c4su28xhP7FH5g3epsLz6ooGBKNyPGyK2qoPPE0NGUUGL5irWmjevZnqXuNNn_gBiYwAAAAFmy4pOAA")
 # Split the sessions only if raw_sessions is not empty
 STRING_SESSIONS = list(map(str.strip, raw_sessions.split(","))) if raw_sessions else []
 
