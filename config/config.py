@@ -56,11 +56,11 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002429299234"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1004861242262"))
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "7756182503").split())
+    map(int, getenv("OWNER_ID", "6735026878").split())
 )  # Input type must be interger
 
 # make your bots privacy from telegra.ph and put your url here
