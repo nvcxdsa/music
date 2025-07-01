@@ -24,7 +24,7 @@ OPENAI_API_KEY = getenv("OPENAI_API_KEY", "sk-n5wk7GogHn2Sz8jnZpT4T3BlbkFJUmL7NF
 COOKIE_LINK = getenv("COOKIE_LINK", "https://batbin.me/tenacious")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://gitugingrosir:r5qKNkI0ibqhwjr4@cluster0.g9wubfr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://yuzimusicbot:i8RaqHtZFvvlP4GZ@cluster0.2ukrc.mongodb.net/?retryWrites=true&w=majority")
 
 # Clan mode for voice chats. If you want to enable this feature, set it to True.
 CLEANMODE_DELETE_MINS = int(
