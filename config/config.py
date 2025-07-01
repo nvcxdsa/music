@@ -8,14 +8,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "20245305"))
-API_HASH = getenv("API_HASH", "81031095410ca8ce872d5679754634f85")
+API_ID = int(getenv("API_ID", "22463709"))
+API_HASH = getenv("API_HASH", "25c1f59ab1e6bba7b0c31778834de784")
 
 MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002060678260"))
 MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/vstreid")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "7369799329:AAGjweifNI46886435788TosJNkmBwjTCM18")
+BOT_TOKEN = getenv("BOT_TOKEN", "8198378098:AAFvtZBx3v7nYQJ29RgfBaB805M0Ut3q7Dk")
 
 # Get it from https://openai.com
 OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
@@ -24,16 +24,16 @@ OPENAI_API_KEY = getenv("OPENAI_API_KEY", "sk-n5wk7GogHn2Sz8jnZpT4T3BlbkFJUmL7NF
 COOKIE_LINK = getenv("COOKIE_LINK", "https://batbin.me/tenacious")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vmudiboyt:i8Raqtdfvjj4GZ@cluster0.2ukrc.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://gitugingrosir:r5qKNkI0ibqhwjr4@cluster0.g9wubfr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 # Clan mode for voice chats. If you want to enable this feature, set it to True.
 CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "999")
+    getenv("CLEANMODE_MINS", "9999")
 )  # Remember to give value in Seconds
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "300")
+    getenv("DURATION_LIMIT", "9999")
 )  # Remember to give value in Minutes
 
 # Enable / Disable external plugins
