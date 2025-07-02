@@ -183,7 +183,7 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://files.catbox.moe/ku6cg5.jpg",
+    "https://files.catbox.moe/5lm4lw.jpg",
     # This is the file id of the photo you can also put the url of photo
 )
 
