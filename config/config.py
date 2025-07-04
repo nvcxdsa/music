@@ -8,11 +8,11 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "22463709"))
-API_HASH = getenv("API_HASH", "25c1f59ab1e6bba7b0c31778834de784")
+API_ID = int(getenv("API_ID", "29346197"))
+API_HASH = getenv("API_HASH", "4de265464017f7a1342946f8a32d1a59")
 
-MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-1002406494890"))
-MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/skndldntee")
+MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-100252686928"))
+MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/allgroupofc")
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN", "8198378098:AAFvtZBx3v7nYQJ29RgfBaB805M0Ut3q7Dk")
@@ -60,7 +60,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-100281485053"))
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6735026878").split())
+    map(int, getenv("OWNER_ID", "1240540994").split())
 )  # Input type must be interger
 
 # make your bots privacy from telegra.ph and put your url here
@@ -149,7 +149,7 @@ SET_CMDS = getenv("SET_CMDS", "False")
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @WinxStringBot
 # Get the environment variable with a default value of an empty string
-raw_sessions = getenv("STRING_SESSIONS", "BQFWxN0Ar1TECHxfYkT8zsrf1qnAaHfbvO4GcFDvMg6DFp-T7EBiZI0_CyxD54wfPAAPOblZ9u6pi_VmNwQewMxi3BaCs5nXWfSNI8gz66hQb2Fd1sXGzJvBEwg6v85XH87m6YIYP8rdvimZNJEmuS_daybe1XAYSqqc0xhR6S62E753k-7Fr8utM82yYTbg49pkYQCoUOdDCskcQB09fw-TdJpydLuVYCKgzGc-yF4C7sIjGtaGraZ2XKcSmEqgvDDfCKTX0Yi-uy-84H0ZXtKw7-Dsb8SzqDGPQRqy0_TbTKMFbDTZDNXGgHwIUNalaHR9TmXSmCUfTFxaf5oXBWM8AL1yDwAAAAFlL7W6AA")
+raw_sessions = getenv("STRING_SESSIONS", "BQG_yZUAxdUq4p8P3OWMeBFxtNasOFOyOuLc5xgEFQdKjE_R0rEGSNvcJhtNoXfDflzMKfsOq0rMyD3HMDvngDp0439T1W3hPuDBkn9-eqjk90l6DUB6Gr2-rSFx-fwbsdj8SoUMFmCEyuiyOi3LA7oRq4Svje3BAnCzmhCtM2QzdX8RLuz_94IA2BmRvenO1IFNndktQIxMveXPv8yorSSCRL57Hhmoj_gECrbGRU5xv32nUMcEx9DrAGTcF0Kl8D49K-DWglN29I36_Tx8UGKsF8ULgBlRPYMvSPX_oiLDHloH9sPOIX2NuMlrDOeg1V1Qn9aVKFhWuggbvqRSPDoj78E8sAAAAAGTY78VAA")
 # Split the sessions only if raw_sessions is not empty
 STRING_SESSIONS = list(map(str.strip, raw_sessions.split(","))) if raw_sessions else []
 
@@ -183,7 +183,7 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://files.catbox.moe/5lm4lw.jpg",
+    "https://graph.org/file/e074cd30951207b8022be-4521e21e55144520a5.jpg",
     # This is the file id of the photo you can also put the url of photo
 )
 
