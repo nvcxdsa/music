@@ -15,7 +15,7 @@ MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-100252686928"))
 MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/allgroupofc")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "8198378098:AAFvtZBx3v7nYQJ29RgfBaB805M0Ut3q7Dk")
+BOT_TOKEN = getenv("BOT_TOKEN", "8111941771:AAHuk3r23i2qIpWjiiC7wxJ3RaPl-lMXk_8")
 
 # Get it from https://openai.com
 OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
