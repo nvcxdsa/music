@@ -11,8 +11,8 @@ load_dotenv()
 API_ID = int(getenv("API_ID", "29346197"))
 API_HASH = getenv("API_HASH", "4de265464017f7a1342946f8a32d1a59")
 
-MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-100252686928"))
-MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/allgroupofc")
+MUST_JOIN_ID = int(getenv("MUST_JOIN_ID", "-100231768132"))
+MUST_JOIN_LINK = getenv("MUST_JOIN_LINK", "t.me/+K0QafLYjlm40ZjRl")
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN", "8111941771:AAHuk3r23i2qIpWjiiC7wxJ3RaPl-lMXk_8")
